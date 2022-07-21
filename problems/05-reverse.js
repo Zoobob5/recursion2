@@ -11,12 +11,20 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
+// base by length
+// recure by word length{
+// find the letters
+// take the letters
+// move to back or front}
 
 
 function reverse(str) {
-  // Your code here
+  if(str.length === 0){
+    return '';
+  }
+  return reverse(str.slice(1)) + str[0];
 }
-
+console.log(reverse("house")); // "esuoh"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
