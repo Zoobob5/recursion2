@@ -13,10 +13,35 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 
+// function addToTwelve(arr) {
+//   // Your code here
+//   if(arr.length<=1)return false
+//   if(arr[0]+arr[1]===12){
+//     return true
+//   }else{
+//     return addToTwelve(arr.slice(1))
+//   }
+// }
+
+
 function addToTwelve(arr) {
   // Your code here
-}
+  if(arr.length<=1)return false
+  for(let i=1; i<arr.length; i++){
+    if(arr[0]+arr[i]===12){
+      return true
+    }
+      
+    }
+    return addToTwelve(arr.slice(1))
+  }
+  
 
+console.log(addToTwelve([1, 5, 4, 7, 6])); // true
+console.log(addToTwelve([1, 3, 4, 7, 6])); // false
+console.log(addToTwelve([1, 11, 4, 7, 6])); // true
+console.log(addToTwelve([1, 12, 4, 7, 6])); // false
+console.log(addToTwelve([1])); // false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
